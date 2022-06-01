@@ -48,17 +48,14 @@ public class ErettsegiMain {
         HashMap<String, Integer> telkekC = new HashMap<>();
 
         for(String line : txt) {
-            if(line.split(" ")[3].equalsIgnoreCase("a")) {
+            if(line.split(" ")[3].equalsIgnoreCase("a"))
                 telkekA.put(line, ado(line));
-            }
 
-            if(line.split(" ")[3].equalsIgnoreCase("b")) {
+            if(line.split(" ")[3].equalsIgnoreCase("b"))
                 telkekB.put(line, ado(line));
-            }
 
-            if(line.split(" ")[3].equalsIgnoreCase("c")) {
+            if(line.split(" ")[3].equalsIgnoreCase("c"))
                 telkekC.put(line, ado(line));
-            }
         }
 
         System.out.println("5. feladat");
@@ -73,13 +70,12 @@ public class ErettsegiMain {
         System.out.println("6. feladat. A több sávba sorolt utcák:");
         for(String line : txt) {
             if(telek.containsKey(line.split(" ")[1])) {
-                if(telek.get(line.split(" ")[1]).equalsIgnoreCase(line.split(" ")[3])) {
+                if(telek.get(line.split(" ")[1]).equalsIgnoreCase(line.split(" ")[3]))
                     continue;
-                }
 
-                if(!list.contains(line.split(" ")[1])) {
+                if(!list.contains(line.split(" ")[1]))
                     list.add(line.split(" ")[1]);
-                }
+
                 telek.put(line.split(" ")[1], line.split(" ")[3]);
                 continue;
             }
@@ -90,9 +86,8 @@ public class ErettsegiMain {
 
     public static int getAdoOfSav(HashMap<String, Integer> hashMap) {
         int ado = 0;
-        for(Map.Entry<String, Integer> telek : hashMap.entrySet()) {
+        for(Map.Entry<String, Integer> telek : hashMap.entrySet())
             ado += telek.getValue();
-        }
 
         return ado;
     }
@@ -106,9 +101,9 @@ public class ErettsegiMain {
             String owner = splits[0];
             int adoToTelek = ado(line);
 
-            if(owners.containsKey(owner)) {
+            if(owners.containsKey(owner))
                 owners.put(owner, owners.get(owner) + adoToTelek);
-            } else
+            else
                 owners.put(owner, adoToTelek);
         }
 
