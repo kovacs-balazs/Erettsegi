@@ -1,5 +1,5 @@
 ### Magyar informatika érettségik
 
 ## Idők:
-**2022. május: 57 perc**\n
+**2022. május: 57 perc**
 *Google: BufferedReader*
