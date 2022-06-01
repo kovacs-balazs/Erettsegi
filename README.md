@@ -4,4 +4,4 @@
 **2022. május: 57 perc** </br>
 *Google: BufferedReader*
 
-**2021. október: 1 óra ~50 perc** </br>
+**2021. október: 1 óra és ~50 perc** </br>
