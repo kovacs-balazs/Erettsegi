@@ -127,9 +127,8 @@ public class ErettsegiMain {
         boolean contains = false;
 
         for(String txtLine : txt) {
-            if(txtLine.contains(inLine) && inLine.length() == txtLine.length()) {
+            if(txtLine.contains(inLine) && inLine.length() == txtLine.length())
                 contains = true;
-            }
         }
 
         if(!contains) {
