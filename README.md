@@ -2,4 +2,5 @@
 
 ## Idők:
 **2022. május: 57 perc**
+
 *Google: BufferedReader*
