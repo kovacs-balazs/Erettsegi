@@ -17,13 +17,15 @@ public class NegyedikFeladat implements Feladat {
 
         for (Main.CarPair carPair : Main.getInstance().getCarPairs()) {
             if(carPair.getCarIn() == null) continue;
-            if(!kms.containsKey(carPair.getCarOut().getPlate())) {
-                kms.put(carPair.getCarOut().getPlate(), carPair.getDistanceTraveled());
-            } else {
-                int distance = kms.get(carPair.getCarOut().getPlate());
-                distance += carPair.getDistanceTraveled();
-                kms.put(carPair.getCarOut().getPlate(), distance);
-            }
+            if(kms.containsKey(carPair.getCarOut().getPlate())) continue;
+
+            kms.put(
+                    carPair.getCarOut().getPlate(),
+                    Main.getInstance().getCarPairs().stream()
+                            .filter(p -> p.getCarOut().getPlate().equals(carPair.getCarOut().getPlate()))
+                            .mapToInt(Main.CarPair::getDistanceTraveled)
+                            .sum()
+            );
         }
         for (Map.Entry<String, Integer> entry : kms.entrySet()) {
             //CEG303 7465 km
