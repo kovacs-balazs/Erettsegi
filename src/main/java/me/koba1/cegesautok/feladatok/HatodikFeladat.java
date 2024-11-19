@@ -23,8 +23,7 @@ public class HatodikFeladat implements Feladat {
             String plate = scn.nextLine();
             List<String> lines = new ArrayList<>();
 
-            for (Main.CarPair pair : Main.getInstance().getCarPairs()) {
-                if (!pair.getCarOut().getPlate().equals(plate)) continue;
+            for (Main.CarPair pair : Main.getInstance().getCarPairs().stream().filter(p -> p.getCarOut().getPlate().equals(plate)).toList()) {
                 StringBuilder builder = new StringBuilder()
                         .append(pair.getCarOut().getId())
                         .append("\t")
