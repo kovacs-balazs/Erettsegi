@@ -15,11 +15,10 @@ public class MasodikFeladat implements Feladat{
     @Override
     public void run() {
         System.out.println("Nap: ");
-        //Scanner scn = new Scanner(System.in);
+        Scanner scn = new Scanner(System.in);
 
-        //if (scn.hasNext()) {
-        if(true){
-            String line = "4"; //scn.nextLine();
+        if (scn.hasNext()) {
+            String line = scn.nextLine();
 
             int day = Integer.parseInt(line);
             List<Car> daycars = Main.getInstance().getCars().stream().filter(c -> c.getDayOfMonth() == day).toList();

@@ -18,10 +18,9 @@ public class HatodikFeladat implements Feladat {
     @Override
     public void run() {
         System.out.println("Rendszám: ");
-        //Scanner scn = new Scanner(System.in);
-        //if (scn.hasNext()) {
-        if(true){
-            String plate = "CEG304"; //scn.nextLine();
+        Scanner scn = new Scanner(System.in);
+        if (scn.hasNext()) {
+            String plate = scn.nextLine();
             List<String> lines = new ArrayList<>();
 
             for (Main.CarPair pair : Main.getInstance().getCarPairs()) {
