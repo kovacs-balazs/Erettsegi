@@ -122,7 +122,7 @@ public class Main {
 
         Card enter = this.cards.stream().filter(c -> c.getCode().equals(code) && c.getAction() == Card.CardAction.BELEPES).findFirst().orElse(null);
         if(enter == null) {
-            System.out.println("z Ilyen azonosítójú tanuló aznap nem volt az iskolában.");
+            System.out.println("Ilyen azonosítójú tanuló aznap nem volt az iskolában.");
             return;
         }
 
